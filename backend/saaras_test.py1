@@ -1,0 +1,27 @@
+import requests
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+api_key = os.getenv("SARVAM_API_KEY")
+
+url = "https://api.sarvam.ai/speech-to-text"
+headers = {
+    "api-subscription-key": api_key
+}
+
+home = os.path.expanduser("~")
+file_path = home + "/Downloads/new_recording.wav"
+
+with open(file_path, "rb") as audio_file:
+    files = {
+        "file": ("new_recording.wav", audio_file, "audio/wav")
+    }
+    data = {
+        "model": "saaras:v4",
+        "language_code": "unknown"
+    }
+    response = requests.post(url, headers=headers, files=files, data=data)
+
+print(response.status_code)
+print(response.text)
