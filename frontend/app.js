@@ -86,7 +86,7 @@ function render(d) {
   const L = d.labels;
   if (!d.results.length) { $('res').innerHTML = '<div class="notice">No matching schemes in our list yet for these details. Please check the official government websites.</div>'; return; }
   lastText = '';
-  $('res').innerHTML = d.results.map((s, i) => {
+  $('res').innerHTML = '<div class="notice">These are possible matches, not confirmed eligibility. Please check the official source before applying.</div>' + d.results.map((s, i) => {
     const why = s.why_t || s.why, docs = s.documents_t || s.documents, nxt = s.next_steps_t || s.next_steps;
     lastText += s.name + '. ' + why.join(' ') + ' ';
     const link = s.official_url ? '<a class="btn" href="' + esc(s.official_url) + '" target="_blank" rel="noopener">Open official source</a>' : '<p class="note">Official link: not added yet.</p>';
