@@ -46,3 +46,22 @@ nav a { margin: 0 12px; color: var(--forest); text-decoration: none; }
   .hero h1 { font-size: 34px; }
   nav { display: none; }
 }
+.cta { background: var(--forest); color: #fff; padding: 70px 0; text-align: center; }
+.cta h2 { font-size: 34px; margin: 0 0 10px; }
+.cta p { font-size: 18px; margin: 0 0 24px; }
+
+.site-footer { background: #fff; border-top: 1px solid var(--sage); padding: 32px 0; }
+.site-footer p { margin: 6px 0; }
+.site-footer .small { font-size: 14px; max-width: 700px; }
+.features { padding: 70px 0; background: var(--cream); }
+.features h2 { font-size: 34px; margin: 0 0 8px; }
+.cards.four { grid-template-columns: repeat(4, 1fr); }
+.features .card { background: #fff; }
+.note { margin-top: 28px; font-size: 15px; font-style: italic; }
+
+@media (max-width: 1000px) {
+  .cards.four { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .cards.four { grid-template-columns: 1fr; }
+}
