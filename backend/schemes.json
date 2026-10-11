@@ -1,0 +1,296 @@
+[
+  {
+    "id": "scheme-1",
+    "sample": false,
+    "verified": false,
+    "name": "PM-KISAN Samman Nidhi",
+    "benefit": "Direct income support to eligible landholding farmer families; scheme provides ₹6,000 per year in three instalments, subject to current rules.",
+    "eligibility": "Eligible landholding farmer families, subject to exclusions and land-record/verification conditions.",
+    "states": [
+      "any"
+    ],
+    "crops": [
+      "any"
+    ],
+    "needs": [
+      "Financial assistance",
+      "General government schemes"
+    ],
+    "documents": [
+      "Aadhaar",
+      "bank account details",
+      "landholding/land records",
+      "mobile number and e-KYC/verification details as required"
+    ],
+    "next_steps": [
+      "Confirm current eligibility, documents and dates on the official source.",
+      "Verify current eligibility, exclusions and required documents on the official portal before displaying.",
+      "Keep your documents ready before you apply."
+    ],
+    "official_url": "https://pmkisan.gov.in/"
+  },
+  {
+    "id": "scheme-2",
+    "sample": false,
+    "verified": false,
+    "name": "Pradhan Mantri Fasal Bima Yojana (PMFBY)",
+    "benefit": "Crop insurance for eligible notified crops and areas against specified crop risks.",
+    "eligibility": "Farmers growing notified crops in notified areas; tenant farmers/sharecroppers may qualify if conditions and proof requirements are met.",
+    "states": [
+      "any"
+    ],
+    "crops": [
+      "any"
+    ],
+    "needs": [
+      "Crop insurance",
+      "General government schemes"
+    ],
+    "documents": [
+      "Identity/Aadhaar details as applicable",
+      "bank details",
+      "land or cultivation proof",
+      "crop/season details",
+      "tenancy proof where applicable"
+    ],
+    "next_steps": [
+      "Confirm current eligibility, documents and dates on the official source.",
+      "Verify season-specific enrolment dates, notified crops/areas, and state-specific requirements.",
+      "Keep your documents ready before you apply."
+    ],
+    "official_url": "https://pmfby.gov.in/"
+  },
+  {
+    "id": "scheme-3",
+    "sample": false,
+    "verified": false,
+    "name": "Kisan Credit Card (KCC)",
+    "benefit": "Credit for eligible cultivation, farming expenses and specified allied activities.",
+    "eligibility": "Eligible owner-cultivators, joint cultivators, tenant farmers, oral lessees, sharecroppers and eligible farmer groups, subject to lender rules.",
+    "states": [
+      "any"
+    ],
+    "crops": [
+      "any"
+    ],
+    "needs": [
+      "Financial assistance",
+      "General government schemes"
+    ],
+    "documents": [
+      "Application form",
+      "identity/address proof",
+      "landholding or cultivation proof",
+      "crop and acreage details",
+      "bank-specific documents"
+    ],
+    "next_steps": [
+      "Confirm current eligibility, documents and dates on the official source.",
+      "Requirements vary by bank and applicant type; confirm with the selected bank and official scheme page.",
+      "Keep your documents ready before you apply."
+    ],
+    "official_url": "https://www.myscheme.gov.in/schemes/kcc"
+  },
+  {
+    "id": "scheme-4",
+    "sample": false,
+    "verified": false,
+    "name": "Pradhan Mantri Kisan Maandhan Yojana (PM-KMY)",
+    "benefit": "Contributory pension scheme for eligible small and marginal farmers, with an assured pension under scheme rules after age 60.",
+    "eligibility": "Generally small and marginal farmers aged 18–40 at enrolment with cultivable land up to 2 hectares, subject to exclusions and current rules.",
+    "states": [
+      "any"
+    ],
+    "crops": [
+      "any"
+    ],
+    "needs": [
+      "General government schemes",
+      "Financial assistance"
+    ],
+    "documents": [
+      "Aadhaar",
+      "savings bank account/passbook and IFSC",
+      "land records",
+      "other enrolment declarations as required"
+    ],
+    "next_steps": [
+      "Confirm current eligibility, documents and dates on the official source.",
+      "Verify current enrolment conditions, exclusions and contribution details on the official scheme page.",
+      "Keep your documents ready before you apply."
+    ],
+    "official_url": "https://www.myscheme.gov.in/schemes/pmkmdy"
+  },
+  {
+    "id": "scheme-5",
+    "sample": false,
+    "verified": false,
+    "name": "Pradhan Mantri Krishi Sinchayee Yojana (PMKSY)",
+    "benefit": "Supports irrigation access and water-use efficiency through different components.",
+    "eligibility": "Depends on the component, state implementation, land/water conditions and applicant category.",
+    "states": [
+      "any"
+    ],
+    "crops": [
+      "any"
+    ],
+    "needs": [
+      "Irrigation & water",
+      "General government schemes"
+    ],
+    "documents": [
+      "Typically applicant identity, land/holding details, bank details and component-specific application documents",
+      "confirm locally"
+    ],
+    "next_steps": [
+      "Confirm current eligibility, documents and dates on the official source.",
+      "Check the relevant component and state agriculture/irrigation department; do not assume one national document list.",
+      "Keep your documents ready before you apply."
+    ],
+    "official_url": "https://pmksy.gov.in/"
+  },
+  {
+    "id": "scheme-6",
+    "sample": false,
+    "verified": false,
+    "name": "Soil Health Card Scheme",
+    "benefit": "Soil testing and nutrient recommendations to help farmers make informed soil and fertilizer decisions.",
+    "eligibility": "Farmers can access soil testing and related services through scheme/department channels; process may vary by location.",
+    "states": [
+      "any"
+    ],
+    "crops": [
+      "any"
+    ],
+    "needs": [
+      "Soil health",
+      "Seeds & fertilisers",
+      "General government schemes"
+    ],
+    "documents": [
+      "Ask the local agriculture department/soil-testing lab about farmer details, land/plot information and any local registration requirements"
+    ],
+    "next_steps": [
+      "Confirm current eligibility, documents and dates on the official source.",
+      "Confirm the current service process with the official portal or local agriculture office.",
+      "Keep your documents ready before you apply."
+    ],
+    "official_url": "https://soilhealth.dac.gov.in/"
+  },
+  {
+    "id": "scheme-7",
+    "sample": false,
+    "verified": false,
+    "name": "e-NAM (National Agriculture Market)",
+    "benefit": "Online agricultural market platform supporting price discovery and trade through participating mandis.",
+    "eligibility": "Farmers can participate through mandis and registration processes supported by the platform; local mandi participation matters.",
+    "states": [
+      "any"
+    ],
+    "crops": [
+      "any"
+    ],
+    "needs": [
+      "Market access & selling",
+      "General government schemes"
+    ],
+    "documents": [
+      "Farmer identity and registration details",
+      "bank details and other information requested by the participating mandi/platform"
+    ],
+    "next_steps": [
+      "Confirm current eligibility, documents and dates on the official source.",
+      "Verify farmer registration steps and whether the relevant mandi and commodity participate.",
+      "Keep your documents ready before you apply."
+    ],
+    "official_url": "https://www.enam.gov.in/"
+  },
+  {
+    "id": "scheme-8",
+    "sample": false,
+    "verified": false,
+    "name": "Agriculture Infrastructure Fund (AIF)",
+    "benefit": "Financing support for eligible agriculture infrastructure and post-harvest projects, under current programme rules.",
+    "eligibility": "Eligible farmers, FPOs, agri-entrepreneurs and other permitted entities; eligibility depends on project and current guidelines.",
+    "states": [
+      "any"
+    ],
+    "crops": [
+      "any"
+    ],
+    "needs": [
+      "Market access & selling",
+      "General government schemes"
+    ],
+    "documents": [
+      "Entity/applicant documents",
+      "project report",
+      "land/asset details as relevant",
+      "bank and financing documents",
+      "lender-specific requirements"
+    ],
+    "next_steps": [
+      "Confirm current eligibility, documents and dates on the official source.",
+      "Better suited to farmers' groups or infrastructure projects than to a simple individual cash-benefit search.",
+      "Keep your documents ready before you apply."
+    ],
+    "official_url": "https://agriinfra.dac.gov.in/"
+  },
+  {
+    "id": "scheme-9",
+    "sample": false,
+    "verified": false,
+    "name": "PM Formalisation of Micro Food Processing Enterprises (PMFME)",
+    "benefit": "Support for eligible micro food-processing enterprises, including formalisation and assistance defined by programme guidelines.",
+    "eligibility": "Eligible micro food-processing units and other permitted applicants under current scheme guidelines.",
+    "states": [
+      "any"
+    ],
+    "crops": [
+      "any"
+    ],
+    "needs": [
+      "General government schemes",
+      "Other farming needs"
+    ],
+    "documents": [
+      "Business/enterprise details",
+      "identity and bank details",
+      "unit/project information",
+      "registration and category documents as applicable"
+    ],
+    "next_steps": [
+      "Confirm current eligibility, documents and dates on the official source.",
+      "Confirm current application availability, beneficiary category and detailed requirements on the official ministry/programme pages.",
+      "Keep your documents ready before you apply."
+    ],
+    "official_url": "https://mofpi.gov.in/"
+  },
+  {
+    "id": "scheme-10",
+    "sample": false,
+    "verified": false,
+    "name": "National Beekeeping and Honey Mission (NBHM)",
+    "benefit": "Promotes beekeeping, honey production and related value-chain development through programme components.",
+    "eligibility": "Depends on the specific component, implementing agency and beneficiary category.",
+    "states": [
+      "any"
+    ],
+    "crops": [
+      "any"
+    ],
+    "needs": [
+      "Other farming needs",
+      "General government schemes"
+    ],
+    "documents": [
+      "Applicant/organization details, project proposal and bank/identity documents as required by the implementing agency"
+    ],
+    "next_steps": [
+      "Confirm current eligibility, documents and dates on the official source.",
+      "Check current calls, component guidelines and implementing agency before presenting as an open application.",
+      "Keep your documents ready before you apply."
+    ],
+    "official_url": "https://nbb.gov.in/"
+  }
+]
