@@ -1,104 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KrishiSetu</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KrishiSetu</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <header class="site-header">
-    <div class="container nav">
-      <a class="logo" href="index.html">KrishiSetu</a>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="#guidance">Farming Guidance</a>
-        <a href="#schemes">Government Schemes</a>
-        <a href="#resources">Resources</a>
-      </nav>
-      <a class="btn btn-lime" href="assistant.html">Talk to KrishiSetu</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-wheat" viewBox="0 0 24 24"><path d="M12 22V9M12 9c0-3 2-5 4-5 0 3-1 5-4 5zM12 9c0-3-2-5-4-5 0 3 1 5 4 5zM12 15c0-3 2-5 4-5 0 3-1 5-4 5zM12 15c0-3-2-5-4-5 0 3 1 5 4 5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-mic" viewBox="0 0 24 24"><path d="M12 3a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3zM5 11a7 7 0 0 0 14 0M12 18v3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</svg>
+ 
+<header><div class="bar">
+  <a class="logo" href="index.html"><span class="logo-ic"><svg class="ic"><use href="#i-wheat"/></svg></span>KrishiSetu</a>
+  <nav><a class="on" href="index.html">Home</a><a href="find.html">Find support</a><a href="find.html?voice=1">Talk in your language</a>
+    <a class="pill" href="find.html">Find my support</a></nav>
+</div></header>
+ 
+<main class="wrap">
+  <section class="hero2">
+    <div>
+      <h1>Bridging Farmers to the Right Support.</h1>
+      <p>Government schemes and farm support are often scattered, hard to understand, or not in your language. KrishiSetu asks a few simple questions and shows support that may fit your state, crop and needs.</p>
+      <div class="row-btn">
+        <a class="btn" href="find.html"><svg class="ic"><use href="#i-wheat"/></svg>Find My Support</a>
+        <a class="btn amber" href="find.html?voice=1"><svg class="ic"><use href="#i-mic"/></svg>Talk to KrishiSetu</a>
+      </div>
+      <p class="fine2">Not an official government platform. Results are potential matches only.</p>
     </div>
-  </header>
-
-  <main>
-    <section class="hero">
-      <div class="container">
-        <h1>The Right Support for Every Farmer.</h1>
-        <p>Discover farming guidance, explore relevant government schemes, and find the support your farm needs, all in one place.</p>
-        <div class="buttons">
-          <a class="btn btn-green" href="#find">Find My Support</a>
-          <a class="btn btn-outline" href="assistant.html">Talk to KrishiSetu</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="how">
-      <div class="container">
-        <h2>How KrishiSetu Works</h2>
-        <p class="section-intro">Three simple steps to find the support that fits your farm.</p>
-        <div class="cards three">
-          <div class="card">
-            <div class="step">1</div>
-            <h3>Tell Us About Your Farm</h3>
-            <p>Share your state, crop, land size and what you need help with. You can type, or speak in your language.</p>
-          </div>
-          <div class="card">
-            <div class="step">2</div>
-            <h3>Discover Relevant Support</h3>
-            <p>See government schemes that may fit your situation, with the reasons why they were suggested.</p>
-          </div>
-          <div class="card">
-            <div class="step">3</div>
-            <h3>Take Your Next Step</h3>
-            <p>Get a list of documents to prepare and a link to the official source to apply.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-    <section class="features" id="schemes">
-      <div class="container">
-        <h2>What KrishiSetu Helps You With</h2>
-        <p class="section-intro">Simple tools to help you find and prepare for support.</p>
-        <div class="cards four">
-          <div class="card">
-            <h3>Voice in Your Language</h3>
-            <p>Ask your question by speaking or typing in Kannada, Hindi or English.</p>
-          </div>
-          <div class="card">
-            <h3>Government Schemes</h3>
-            <p>See schemes that may match your farm, with links to the official source.</p>
-          </div>
-          <div class="card">
-            <h3>Documents to Prepare</h3>
-            <p>Get a checklist of the papers you may need before you apply.</p>
-          </div>
-          <div class="card">
-            <h3>Next Steps</h3>
-            <p>Know what to do next, in simple words, with an official link.</p>
-          </div>
-        </div>
-        <p class="note">KrishiSetu shows potential matches only. It is not an official decision.</p>
-      </div>
-    </section>
-    
-    <section class="cta">
-      <div class="container">
-        <h2>Find the support that fits your farm</h2>
-        <p>Tell us a few details and see which government schemes may be relevant.</p>
-        <a class="btn btn-lime" href="find.html" id="find">Find My Support</a>
-      </div>
-    </section>
-  </main>
-  
-  <footer class="site-footer">
-    <div class="container">
-      <strong>KrishiSetu</strong>
-      <p>Bridging Farmers to the Right Support.</p>
-      <p class="small">KrishiSetu shows potential matches only and is not an official government service. Always confirm details on the official source.</p>
-    </div>
-  </footer>
-
+    <div class="photo"></div>
+  </section>
+ 
+  <h2 class="sec">How it works</h2>
+  <div class="grid g4">
+    <div class="card"><div class="num">1</div><h3>Speak or type</h3><p>Choose how you want to answer, and pick your language.</p></div>
+    <div class="card"><div class="num">2</div><h3>Tell us your need</h3><p>Your state, main crop and the kind of help you are looking for.</p></div>
+    <div class="card"><div class="num">3</div><h3>See possible support</h3><p>We show records that match your answers and explain why.</p></div>
+    <div class="card"><div class="num">4</div><h3>Confirm officially</h3><p>Check the official source. The authority decides eligibility.</p></div>
+  </div>
+ 
+  <div class="grid g2">
+    <a class="card big" href="find.html"><h2>Find schemes &rarr;</h2><p>Answer a few questions and see schemes that may fit, with reasons and documents to prepare.</p></a>
+    <a class="card big" href="find.html?voice=1"><h2>Talk in your language &rarr;</h2><p>Speak your answers and hear the results in Hindi, Kannada and other Indian languages.</p></a>
+  </div>
+</main>
+ 
+<footer class="foot"><div class="wrap">
+  <strong class="serif">KrishiSetu &ndash; Bridging Farmers to the Right Support.</strong>
+  <p>KrishiSetu is a hackathon prototype. It is not an official government platform and does not decide eligibility. Always confirm with the relevant authority.</p>
+</div></footer>
 </body>
 </html>
