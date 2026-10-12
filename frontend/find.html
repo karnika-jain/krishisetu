@@ -14,3 +14,73 @@
   <nav><a href="index.html">Home</a><a class="on" href="find.html">Find support</a><a href="find.html?voice=1">Talk in your language</a>
     <a class="pill" href="find.html">Find my support</a></nav>
 </div></header>
+
+<main class="flow">
+  <div class="prog" id="prog"></div>
+  <div class="stepno" id="stepno"></div>
+
+  <section class="panel" data-step="1">
+    <h1>How would you like to answer?</h1>
+    <p class="hint">Choose what is easiest for you.</p>
+    <div class="opts">
+      <button class="opt" data-mode="voice"><b>Speak</b><small>Use your voice</small></button>
+      <button class="opt" data-mode="type"><b>Type</b><small>Use the keyboard</small></button>
+    </div>
+  </section>
+
+  <section class="panel" data-step="2" hidden>
+    <h1>Choose your language</h1>
+    <p class="hint">Results are shown and read aloud in this language. Menus stay in English for now.</p>
+    <div class="opts langs" id="langs"></div>
+    <div class="nav"><button class="btn ghost" data-back>Back</button></div>
+  </section>
+
+  <section class="panel" data-step="3" hidden>
+    <h1>What support are you looking for?</h1>
+    <p class="hint">Tap all that apply.</p>
+    <div class="chips" id="needs"></div>
+    <label for="words">Or describe it in your own words (optional)</label>
+    <textarea id="words"></textarea>
+    <button type="button" class="mic" data-target="words">Tap to speak</button>
+    <div class="msg" id="msg3"></div>
+    <div class="nav"><button class="btn ghost" data-back>Back</button><button class="btn" id="next3">Continue</button></div>
+  </section>
+
+  <section class="panel" data-step="4" hidden>
+    <h1>Tell us about your farm</h1>
+    <p class="hint">State and main crop are needed. The rest is optional.</p>
+    <div class="two">
+      <div><label for="name">Your name (optional)</label><input id="name"><button type="button" class="mic" data-target="name">Tap to speak</button></div>
+      <div><label for="state">State *</label><select id="state"></select></div>
+      <div><label for="district">District (optional)</label><input id="district"><button type="button" class="mic" data-target="district">Tap to speak</button></div>
+      <div><label for="crop">Main crop *</label><input id="crop" placeholder="For example: tomato, paddy"><button type="button" class="mic" data-target="crop">Tap to speak</button></div>
+      <div><label for="land">Land size in acres (optional)</label><input id="land" type="number" min="0" step="0.1"></div>
+    </div>
+    <label for="problem">Main problem (optional)</label>
+    <textarea id="problem"></textarea>
+    <button type="button" class="mic" data-target="problem">Tap to speak</button>
+    <p class="note">We never ask for Aadhaar, bank account numbers or passwords.</p>
+    <div class="msg" id="msg4"></div>
+    <div class="nav"><button class="btn ghost" data-back>Back</button><button class="btn" id="next4">Continue</button></div>
+  </section>
+
+  <section class="panel" data-step="5" hidden>
+    <h1>Add photos (optional)</h1>
+    <p class="hint">Up to 4 photos of your land or crops.</p>
+    <input id="photos" type="file" accept="image/*" multiple>
+    <div class="thumbs" id="thumbs"></div>
+    <p class="note">Photos stay on your device and are not uploaded. Photo analysis is coming later.</p>
+    <div class="nav"><button class="btn ghost" data-back>Back</button><button class="btn" id="next5">Continue</button></div>
+  </section>
+
+  <section class="panel" data-step="6" hidden>
+    <h1>Check your details</h1>
+    <dl id="review"></dl>
+    <div class="nav"><button class="btn ghost" data-back>Back</button><button class="btn amber" id="go">Find my support</button></div>
+    <div class="msg" id="msg6"></div>
+    <div class="res" id="res"></div>
+  </section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>

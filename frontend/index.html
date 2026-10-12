@@ -13,6 +13,38 @@
   <symbol id="i-mic" viewBox="0 0 24 24"><path d="M12 3a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3zM5 11a7 7 0 0 0 14 0M12 18v3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
 </svg>
  
+<div id="splash">
+  <div class="sp-logo"><svg class="ic" style="width:64px;height:64px"><use href="#i-wheat"/></svg></div>
+  <div class="sp-name">KrishiSetu</div>
+  <div class="sp-tag">Bridging Farmers to the Right Support.</div>
+  <div class="sp-bar"><i></i></div>
+  <div class="sp-load">Loading...</div>
+  <div class="sp-by">Presented by Avani Jain and Karnika Jain</div>
+</div>
+<style>
+#splash{position:fixed;inset:0;z-index:9999;background:#f6f1e4;color:#1f4d2b;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px;transition:opacity .6s}
+#splash.hide{opacity:0;pointer-events:none}
+#splash .sp-name{font-family:'Fraunces',serif;font-size:48px;font-weight:700;margin-top:12px}
+#splash .sp-tag{font-family:'Figtree',sans-serif;font-size:18px;margin-top:6px;color:#4f6b4a}
+#splash .sp-bar{width:220px;height:6px;background:#dfe6cf;border-radius:6px;overflow:hidden;margin-top:28px}
+#splash .sp-bar i{display:block;height:100%;width:0;background:#8dbf2f;border-radius:6px;animation:spload 2.4s ease forwards}
+#splash .sp-load{font-family:'Figtree',sans-serif;font-size:14px;margin-top:10px;color:#4f6b4a}
+#splash .sp-by{font-family:'Figtree',sans-serif;font-size:15px;margin-top:40px;font-weight:600}
+@keyframes spload{to{width:100%}}
+</style>
+<script>
+(function(){
+  var s = document.getElementById('splash');
+  try {
+    if (sessionStorage.getItem('ks_splash')) { s.remove(); return; }
+    sessionStorage.setItem('ks_splash', '1');
+  } catch (e) {}
+  setTimeout(function(){
+    s.classList.add('hide');
+    setTimeout(function(){ s.remove(); }, 600);
+  }, 4200);
+})();
+</script>
 <header><div class="bar">
   <a class="logo" href="index.html"><span class="logo-ic"><svg class="ic"><use href="#i-wheat"/></svg></span>KrishiSetu</a>
   <nav><a class="on" href="index.html">Home</a><a href="find.html">Find support</a><a href="find.html?voice=1">Talk in your language</a>
