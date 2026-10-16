@@ -55,32 +55,126 @@ class Profile(BaseModel):
     language: str = "en-IN"
 
 
+
 def has(values, item):
     low = [str(v).strip().lower() for v in values]
     return "any" in low or str(item).strip().lower() in low
 
 
+def normalize_need(value):
+    return " ".join(
+        str(value).lower()
+        .replace("&", "and")
+        .replace("-", " ")
+        .replace("/", " ")
+        .split()
+    )
+
+
+NEED_ALIASES = {
+    "Irrigation & water": [
+        "irrigation", "water", "water supply", "drip",
+        "sprinkler", "watering"
+    ],
+    "Financial assistance": [
+        "financial", "money", "financial help", "financial assistance",
+        "cash support", "income support", "loan", "credit"
+    ],
+    "Crop insurance": [
+        "insurance", "crop insurance", "bima", "crop protection"
+    ],
+    "Soil health": [
+        "soil", "soil testing", "soil health"
+    ],
+    "Seeds & fertilisers": [
+        "seeds", "seed", "fertiliser", "fertilizer",
+        "fertilisers", "fertilizers", "manure"
+    ],
+    "Market access & selling": [
+        "market", "mandi", "selling", "sell crops",
+        "market access", "market prices"
+    ],
+    "Other farming needs": [
+        "beekeeping", "honey", "food processing",
+        "other farming needs"
+    ],
+    "General government schemes": [
+        "general government schemes"
+    ]
+}
+
+
+def need_matches(user_need, scheme_needs):
+    user_text = normalize_need(user_need)
+
+    for scheme_need in scheme_needs:
+        scheme_text = normalize_need(scheme_need)
+
+        if user_text == scheme_text:
+            return True
+
+        if user_text in scheme_text or scheme_text in user_text:
+            return True
+
+        for category, aliases in NEED_ALIASES.items():
+            if normalize_need(category) == scheme_text:
+                if any(alias in user_text for alias in aliases):
+                    return True
+
+    return False
+
+
 @app.post("/api/match")
 async def match(p: Profile):
-    """Fixed rules decide the matches. Sarvam is only used to translate the text."""
+    """Fixed rules decide matches. Sarvam only translates the text."""
     results = []
+
     for s in SCHEMES:
-        state_ok, crop_ok = has(s["states"], p.state), has(s["crops"], p.crop)
-        need_ok = bool({n.lower() for n in p.needs} & {n.lower() for n in s["needs"]})
+        state_ok = has(s["states"], p.state)
+        crop_ok = has(s["crops"], p.crop)
+
+        need_ok = any(
+            need_matches(user_need, s["needs"])
+            for user_need in p.needs
+        )
+
         if not state_ok or (p.needs and not need_ok):
             continue
-        level = "Potential match" if (crop_ok and need_ok) else ("Possible match" if need_ok else "Check eligibility")
+
+        if p.needs and need_ok and crop_ok:
+            level = "Potential match"
+        elif p.needs and need_ok:
+            level = "Possible match"
+        else:
+            level = "Check eligibility"
+
         why = [f"Your state ({p.state}) is covered."]
+
         if crop_ok:
             why.append(f"Your crop ({p.crop}) is covered.")
-        if need_ok:
+
+        if p.needs and need_ok:
             why.append("It supports what you asked for.")
-        results.append({**s, "level": level, "why": why})
-    for r in results:  # translate the readable parts into the farmer's language
+
+        results.append({
+            **s,
+            "level": level,
+            "why": why
+        })
+
+    for r in results:
         for field in ("why", "documents", "next_steps"):
-            r[field + "_t"] = await translate_list(r[field], p.language)
+            r[field + "_t"] = await translate_list(
+                r[field], p.language
+            )
+
     labels = await translate_list(LABELS, p.language)
-    return {"results": results, "labels": labels or LABELS}
+
+    return {
+        "results": results,
+        "labels": labels or LABELS
+    }
+
 
 
 class Speak(BaseModel):
