@@ -104,7 +104,8 @@ async def speak(b: Speak):
 async def transcribe(audio: UploadFile = File(...), language: str = Form("unknown")):
     need_key()
     data = await audio.read()
-    files = {"file": (audio.filename or "speech.webm", data, audio.content_type or "audio/webm")}
+    ctype = (audio.content_type or "audio/webm").split(";")[0]
+    files = {"file": (audio.filename or "speech.webm", data, ctype)}
     async with httpx.AsyncClient(timeout=60) as c:
         r = await c.post(f"{BASE}/speech-to-text", headers=HEAD, files=files,
                          data={"model": "saaras:v3", "language_code": language})
