@@ -60,6 +60,30 @@ def has(values, item):
     low = [str(v).strip().lower() for v in values]
     return "any" in low or str(item).strip().lower() in low
 
+def normalize_need(value):
+    return " ".join(str(value).lower().replace("&", "and").replace("-", " ").replace("/", " ").split())
+
+NEED_ALIASES = {
+    "Irrigation & water": ["irrigation", "water", "drip", "sprinkler", "watering"],
+    "Financial assistance": ["financial", "money", "loan", "credit", "income support"],
+    "Crop insurance": ["insurance", "bima"],
+    "Soil health": ["soil", "soil testing"],
+    "Seeds & fertilisers": ["seed", "fertiliser", "fertilizer", "manure"],
+    "Market access & selling": ["market", "mandi", "selling", "sell crops"],
+    "Other farming needs": ["beekeeping", "honey", "food processing"],
+    "General government schemes": ["general government schemes"]
+}
+
+def need_matches(user_need, scheme_needs):
+    user_text = normalize_need(user_need)
+    for scheme_need in scheme_needs:
+        scheme_text = normalize_need(scheme_need)
+        if user_text == scheme_text or user_text in scheme_text or scheme_text in user_text:
+            return True
+        for category, aliases in NEED_ALIASES.items():
+            if normalize_need(category) == scheme_text and any(alias in user_text for alias in aliases):
+                return True
+    return False
 
 def normalize_need(value):
     return " ".join(

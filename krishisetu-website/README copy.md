@@ -43,4 +43,4 @@ Add an object to `src/data/schemes.json` with `isSample: false`, `verification: 
 Add a TanStack `createServerFn` that calls the speech/translation provider (e.g. Sarvam AI) with a key stored as a server secret. The browser calls only that function — never the provider directly. Keep AI output separate from `matching.ts`; AI should help understand input, not invent schemes.
 
 ## AI Assistant (`/assistant`)
-Working chat built on Lovable AI (server route `src/routes/api/assistant.ts`; the key stays on the server). It answers in English, Hindi or Kannada, uses the official records in `schemes.json`, says when it can't confirm something, and ends every answer with a reminder to check the official portal. The microphone icon is a placeholder only.
+Working chat built on KrishiSetu AI (server route `src/routes/api/assistant.ts`; the key stays on the server). It answers in English, Hindi or Kannada, uses the official records in `schemes.json`, says when it can't confirm something, and ends every answer with a reminder to check the official portal. The microphone icon is a placeholder only.
