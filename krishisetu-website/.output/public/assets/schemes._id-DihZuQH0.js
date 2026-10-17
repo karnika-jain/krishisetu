@@ -1,1 +1,0 @@
-import{t as e}from"./jsx-runtime-BkSabwWG.js";import{g as t}from"./index-BQ7eBohS.js";var n=e();function r(){return(0,n.jsxs)(`div`,{className:`py-20 text-center`,children:[(0,n.jsx)(`h1`,{className:`text-3xl`,children:`Scheme not found`}),(0,n.jsx)(t,{to:`/schemes`,className:`btn-primary mt-6`,children:`Back to directory`})]})}export{r as notFoundComponent};

@@ -1,1 +1,0 @@
-import{t as e}from"./jsx-runtime-BkSabwWG.js";import{a as t}from"./index-BQ7eBohS.js";import{n,t as r}from"./matching-D6Y28mEg.js";import{t as i}from"./ResultsView-C1xstTFG.js";var a=e(),o=()=>(0,a.jsx)(i,{demo:!0,profile:r,results:n(r,t.filter(e=>e.isSample))});export{o as component};
