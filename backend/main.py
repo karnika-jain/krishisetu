@@ -8,6 +8,7 @@ from pathlib import Path
 import httpx
 from dotenv import load_dotenv
 from fastapi import FastAPI, File, Form, HTTPException, UploadFile
+from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 
@@ -20,7 +21,16 @@ SCHEMES = json.loads((ROOT / "schemes.json").read_text(encoding="utf-8"))
 LABELS = ["Why this match?", "Documents to prepare", "Next steps", "Potential matches only. Not an official decision."]
 
 app = FastAPI()
-
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        "http://localhost:8080",
+        "http://127.0.0.1:8080",
+    ],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 def need_key():
     if not KEY:
